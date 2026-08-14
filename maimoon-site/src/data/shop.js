@@ -48,9 +48,9 @@ export const business = {
   whatsapp: "919823016058",
   address: {
     line1: "Shop No 8, Shanti Heights, S No 54",
-    line2: "Katraj - Kondhwa Rd, Kondhwa",
+    line2: "Katraj-Kondhwa Road, Kondhwa",
     city: "Pune, Maharashtra 411048",
-    full: "Shop No 8, Shanti Heights, S No 54, Katraj - Kondhwa Rd, Kondhwa, Pune, Maharashtra 411048",
+    full: "Shop No 8, Shanti Heights, S No 54, Katraj-Kondhwa Road, Kondhwa, Pune, Maharashtra 411048",
   },
   geo: { lat: 18.452371816489133, lng: 73.88991349484694 },
   hours: {

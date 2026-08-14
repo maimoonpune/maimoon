@@ -35,9 +35,15 @@ const jsonLd = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
       opens: "09:30",
       closes: "19:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Sunday"],
+      opens: "09:30",
+      closes: "13:00",
     },
   ],
   aggregateRating: {
@@ -147,7 +153,7 @@ export default function Home() {
           <span className="eyebrow">Visit or call</span>
           <h2 className="section-title">{business.address.city}</h2>
           <p className="about-strip-text">{business.address.line1}, {business.address.line2}</p>
-          <p className="hours-text">Open all days · {business.hours.weekdays}</p>
+          <p className="hours-text">Mon–Sat {business.hours.monSat} · Sun {business.hours.sun}</p>
         </div>
         <a href={business.mapDirectionsUrl} target="_blank" rel="noreferrer" className="btn btn-rust">
           Get Directions

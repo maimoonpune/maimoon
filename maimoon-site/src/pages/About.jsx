@@ -56,7 +56,7 @@ export default function About() {
         <div className="about-block">
           <h2>Where We Are</h2>
           <p>{business.address.full}</p>
-          <p className="about-hours">Open all days · {business.hours.weekdays}</p>
+          <p className="about-hours">Mon–Sat {business.hours.monSat} · Sun {business.hours.sun}</p>
         </div>
       </div>
     </div>

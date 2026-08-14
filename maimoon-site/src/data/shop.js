@@ -43,7 +43,7 @@ export const business = {
   fullName: "Maimoon Industrial Hardware & Plywood",
   tagline: "Industrial Hardware. Plywood. Every Fitting You Need.",
   established: 2002,
-  phones: ["098230 16058", "8830465828", "8956119837"],
+  phones: ["098230 16058", "9595169520", "9657019021"],
   primaryPhone: "09823016058",
   whatsapp: "919823016058",
   address: {
@@ -54,13 +54,13 @@ export const business = {
   },
   geo: { lat: 18.452371816489133, lng: 73.88991349484694 },
   hours: {
-    weekdays: "9:30 AM – 7:30 PM",
-    note: "Open all days",
+    monSat: "9:30 AM – 7:30 PM",
+    sun: "9:30 AM – 1:00 PM",
   },
   mapEmbedUrl:
-    "https://www.google.com/maps?q=Shop+no+8,+Shanti+Heights,+S+no+54,+Katraj+-+Kondhwa+Rd,+Kondhwa,+Pune,+Maharashtra+411048&output=embed",
+    "https://www.google.com/maps?q=18.452371816489133,73.88991349484694&output=embed",
   mapDirectionsUrl:
-    "https://www.google.com/maps/dir/?api=1&destination=Shop+no+8,+Shanti+Heights,+S+no+54,+Katraj+-+Kondhwa+Rd,+Kondhwa,+Pune,+Maharashtra+411048",
+    "https://www.google.com/maps/dir/?api=1&destination=18.452371816489133,73.88991349484694",
   ratings: {
     google: { score: 5.0, count: 4 },
     justdial: { score: 4.9, count: 14 },

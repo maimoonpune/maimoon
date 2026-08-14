@@ -9,7 +9,7 @@ export default function Contact() {
         <title>Contact &amp; Location — Maimoon Hardware &amp; Plywood, Kondhwa Pune</title>
         <meta
           name="description"
-          content={`Find Maimoon Industrial Hardware on Katraj-Kondhwa Road, Kondhwa, Pune — near NIBM Road, Wanowrie, and Undri. Open all days ${business.hours.weekdays}. Call ${business.phones[0]}.`}
+          content={`Find Maimoon Industrial Hardware on Katraj-Kondhwa Road, Kondhwa, Pune — near NIBM Road, Wanowrie, and Undri. Mon–Sat ${business.hours.monSat}, Sun ${business.hours.sun}. Call ${business.phones[0]}.`}
         />
         <link rel="canonical" href={`${siteUrl}/contact`} />
         <meta property="og:title" content="Contact &amp; Location — Maimoon Hardware &amp; Plywood, Kondhwa Pune" />
@@ -20,8 +20,8 @@ export default function Contact() {
       <h1 className="section-title">Contact &amp; Location</h1>
       <p className="contact-intro">
         Maimoon Industrial Hardware &amp; Plywood is on Katraj-Kondhwa Road in Kondhwa, Pune —
-        easily reached from NIBM Road, Wanowrie, Undri, and Bibvewadi. Open all days,{" "}
-        {business.hours.weekdays}.
+        easily reached from NIBM Road, Wanowrie, Undri, and Bibvewadi. Mon–Sat{" "}
+        {business.hours.monSat}, Sun {business.hours.sun}.
       </p>
 
       <div className="contact-grid">
@@ -52,7 +52,7 @@ export default function Contact() {
 
           <div className="contact-block">
             <h2>Hours</h2>
-            <p>Open all days · {business.hours.weekdays}</p>
+            <p>Mon–Sat {business.hours.monSat}<br />Sun {business.hours.sun}</p>
           </div>
         </div>
 

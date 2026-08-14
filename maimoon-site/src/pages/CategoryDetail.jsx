@@ -20,6 +20,16 @@ export default function CategoryDetail() {
     ? content.paragraphs[0].slice(0, 155).replace(/—[^—]*$/, "").trim() + "…"
     : category.description;
 
+  const faqJsonLd = content?.faqs?.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faqs.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  } : null;
+
   return (
     <div className="container category-detail-page">
       <Head>
@@ -28,6 +38,7 @@ export default function CategoryDetail() {
         <link rel="canonical" href={`${siteUrl}/products/${categoryId}`} />
         <meta property="og:title" content={`${category.name} — Maimoon Hardware & Plywood, Kondhwa Pune`} />
         <meta property="og:url" content={`${siteUrl}/products/${categoryId}`} />
+        {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
       </Head>
 
       <nav className="cd-breadcrumb" aria-label="Breadcrumb">

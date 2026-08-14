@@ -2,6 +2,45 @@ import { Head } from "vite-react-ssg";
 import { business, siteUrl } from "../data/shop";
 import "./Contact.css";
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do I get to Maimoon Industrial Hardware in Kondhwa, Pune?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Maimoon is at Shop No 8, Shanti Heights, S No 54, Katraj-Kondhwa Road, Kondhwa, Pune 411048. From NIBM Road it's a 3-4 minute drive. From Wanowrie or Undri, roughly 10 minutes. Search \"Maimoon Industrial Hardware & Plywood\" on Google Maps — the pin is accurate.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are Maimoon's opening hours on Sunday?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Maimoon is open Sunday 9:30 AM–1:00 PM. Monday to Saturday hours are 9:30 AM–7:30 PM.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Maimoon offer delivery for hardware and plywood orders in Pune?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "For bulk orders — construction projects, contractor sourcing, or large quantities — ask about delivery when you call on 098230 16058. We can discuss what's possible on a case-by-case basis.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I contact Maimoon Industrial Hardware?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Call us on 098230 16058 (primary and WhatsApp), 9595169520, or 9657019021. Open Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM.",
+      },
+    },
+  ],
+};
+
 export default function Contact() {
   return (
     <div className="container contact-page">
@@ -14,6 +53,7 @@ export default function Contact() {
         <link rel="canonical" href={`${siteUrl}/contact`} />
         <meta property="og:title" content="Contact &amp; Location — Maimoon Hardware &amp; Plywood, Kondhwa Pune" />
         <meta property="og:url" content={`${siteUrl}/contact`} />
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Head>
 
       <span className="eyebrow">Kondhwa, Pune</span>

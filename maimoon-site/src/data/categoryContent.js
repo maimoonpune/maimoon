@@ -13,6 +13,16 @@ export const categoryContent = {
       "We're located on Katraj-Kondhwa Road, easily reachable from NIBM Road, Wanowrie, Undri, and Bibvewadi. Contractors sourcing for Pune residential and commercial projects visit us regularly — the combination of genuine brand stock and knowledgeable counter staff means you're not guessing at compatibility. Call ahead to check stock for specific models.",
     ],
     relatedIds: ["hand-tools", "fasteners-fittings"],
+    faqs: [
+      {
+        q: "What power tool brands do you stock in Kondhwa, Pune?",
+        a: "Maimoon stocks DeWalt, HIKOKI (formerly Hitachi Power Tools), and Taparia power tools — angle grinders, drills, hammer drills, circular saws, and accessories. Call 098230 16058 to confirm stock for specific models.",
+      },
+      {
+        q: "Where can I buy genuine DeWalt or HIKOKI tools near NIBM Road, Pune?",
+        a: "Maimoon Industrial Hardware on Katraj-Kondhwa Road, Kondhwa is a stocking dealer for DeWalt and HIKOKI power tools — a 3-4 minute drive from NIBM Road. Open Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM.",
+      },
+    ],
   },
 
   "hand-tools": {
@@ -24,6 +34,16 @@ export const categoryContent = {
       "Maimoon is a short drive from NIBM Road, Undri, and Wanowrie — and on the direct Katraj-Kondhwa corridor for anyone coming from the southern parts of Pune. Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM.",
     ],
     relatedIds: ["power-tools", "fasteners-fittings"],
+    faqs: [
+      {
+        q: "What hand tool brands does Maimoon stock in Kondhwa?",
+        a: "Maimoon stocks Taparia and JK Files & Tools — covering pliers, screwdrivers, spanners, wrenches, hammers, chisels, files, and general hand tools. Open Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM at Katraj-Kondhwa Road, Kondhwa, Pune.",
+      },
+      {
+        q: "Can I buy Taparia tools in Kondhwa, Pune?",
+        a: "Yes — Maimoon stocks Taparia's full hand tool range at Shop No 8, Shanti Heights, Katraj-Kondhwa Road, Kondhwa, Pune 411048. Open Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM.",
+      },
+    ],
   },
 
   "adhesives-sealants": {
@@ -35,6 +55,16 @@ export const categoryContent = {
       "Located on Katraj-Kondhwa Road, Kondhwa, Pune — reachable from NIBM Road and the broader South Pune area. Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM.",
     ],
     relatedIds: ["waterproofing-paints", "safety-general"],
+    faqs: [
+      {
+        q: "Do you stock Araldite and M-Seal in Kondhwa, Pune?",
+        a: "Yes — Maimoon stocks Araldite (two-part structural epoxy), M-Seal epoxy putty, Fevicol, and ABRO adhesives and spray cements. Available at Katraj-Kondhwa Road, Kondhwa, Pune. Open Mon–Sat 9:30 AM–7:30 PM.",
+      },
+      {
+        q: "What adhesives do you carry for plumbing and carpentry work?",
+        a: "For plumbing: M-Seal epoxy putty, silicone sealants, and acrylic gap fillers. For carpentry: Fevicol furniture-grade PVA adhesive and Araldite for structural wood bonding. All available at Maimoon, Kondhwa, Pune.",
+      },
+    ],
   },
 
   "waterproofing-paints": {
@@ -46,6 +76,16 @@ export const categoryContent = {
       "We're on Katraj-Kondhwa Road, Kondhwa, Pune 411048 — a short drive from NIBM Road, Wanowrie, and Undri. Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM.",
     ],
     relatedIds: ["adhesives-sealants", "plywood"],
+    faqs: [
+      {
+        q: "Where can I buy Dr Fixit products in Kondhwa, Pune?",
+        a: "Maimoon stocks Dr Fixit waterproofing products including Raincoat, Pidifin 2K, Dampblock, and LW+. Located on Katraj-Kondhwa Road, Kondhwa, Pune 411048. Open Mon–Sat 9:30 AM–7:30 PM.",
+      },
+      {
+        q: "Are genuine Dr Fixit waterproofing products available near NIBM Road, Pune?",
+        a: "Yes — Maimoon has been supplying genuine Dr Fixit products since 2002. Our shop on Katraj-Kondhwa Road, Kondhwa is a 3-4 minute drive from NIBM Road. Call 098230 16058 to confirm specific product availability.",
+      },
+    ],
   },
 
   "plywood": {
@@ -57,6 +97,16 @@ export const categoryContent = {
       "Maimoon is located on Katraj-Kondhwa Road, Kondhwa, Pune 411048. Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM. For bulk orders, ask about delivery options when you call.",
     ],
     relatedIds: ["fasteners-fittings", "waterproofing-paints", "pipes-plumbing"],
+    faqs: [
+      {
+        q: "Do you do plywood delivery in Kondhwa, Pune?",
+        a: "For bulk orders and large quantities, ask about delivery when you call on 098230 16058 — we can discuss what's possible on a case-by-case basis. Walk-in customers are welcome at our shop on Katraj-Kondhwa Road, Kondhwa, Pune 411048.",
+      },
+      {
+        q: "What plywood grades and thicknesses are available at Maimoon?",
+        a: "Maimoon stocks structural and decorative plywood in standard thicknesses (4mm, 6mm, 9mm, 12mm, 18mm, 25mm), block boards, and MDF. Stock varies by grade — call 098230 16058 to confirm current availability before visiting.",
+      },
+    ],
   },
 
   "fasteners-fittings": {
@@ -68,6 +118,16 @@ export const categoryContent = {
       "Located on Katraj-Kondhwa Road, Kondhwa — reachable from NIBM Road, Wanowrie, and across South and Central Pune. Call to confirm stock on specific anchor grades, disc sizes, or fastener specifications before visiting.",
     ],
     relatedIds: ["power-tools", "hand-tools", "pipes-plumbing"],
+    faqs: [
+      {
+        q: "Do you stock Fischer anchors in Kondhwa, Pune?",
+        a: "Yes — Maimoon is a stocking dealer for Fischer anchors, including wedge anchors, chemical capsule systems, and the standard dowel range. Located on Katraj-Kondhwa Road, Kondhwa, Pune. Open Mon–Sat 9:30 AM–7:30 PM.",
+      },
+      {
+        q: "Where can I buy Norton or CUMI cutting discs near NIBM Road, Pune?",
+        a: "Maimoon stocks Norton and CUMI abrasives — cutting discs, grinding discs, flap discs, and fibre discs in sizes from 100mm to 230mm. We're on Katraj-Kondhwa Road, Kondhwa — a short drive from NIBM Road.",
+      },
+    ],
   },
 
   "electricals": {
@@ -79,6 +139,16 @@ export const categoryContent = {
       "Easily reached from NIBM Road, Kondhwa, Wanowrie, and the South Pune area. Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM.",
     ],
     relatedIds: ["safety-general", "power-tools"],
+    faqs: [
+      {
+        q: "Do you stock industrial cables and electrical supplies in Kondhwa, Pune?",
+        a: "Yes — Maimoon stocks Powercord armoured cables, flexible cables, submersible pump cables, switchgear, MCBs, and distribution board components. Located on Katraj-Kondhwa Road, Kondhwa, Pune 411048. Open Mon–Sat 9:30 AM–7:30 PM.",
+      },
+      {
+        q: "Where can I buy Powercord cables near Kondhwa, Pune?",
+        a: "Maimoon stocks Powercord industrial cables and accessories at Katraj-Kondhwa Road, Kondhwa, Pune. Open Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM. Call 098230 16058 to check current stock.",
+      },
+    ],
   },
 
   "safety-general": {
@@ -90,6 +160,16 @@ export const categoryContent = {
       "Maimoon has served contractors, fabricators, and individual buyers from Katraj-Kondhwa Road since 2002. The combination of in-stock V-belts in non-standard sizes and the broad general hardware range makes it a useful single stop for site managers working through a procurement list. Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM.",
     ],
     relatedIds: ["fasteners-fittings", "electricals"],
+    faqs: [
+      {
+        q: "Do you stock V-belts in Kondhwa, Pune?",
+        a: "Yes — V-belts are one of Maimoon's strongest stock lines. We carry A, B, C, D, SPZ, SPA, SPB, and SPC cross-sections in a range of lengths. Located on Katraj-Kondhwa Road, Kondhwa, Pune. Open Mon–Sat 9:30 AM–7:30 PM.",
+      },
+      {
+        q: "What tapes and sealing materials are available at Maimoon?",
+        a: "Maimoon stocks packing tapes, PTFE thread seal tape, electrical insulation tape, self-amalgamating tape, fibre reinforced tape, and double-sided tapes for various substrates. Available at our shop in Kondhwa, Pune — open Mon–Sat 9:30 AM–7:30 PM.",
+      },
+    ],
   },
 
   "pipes-plumbing": {
@@ -101,5 +181,15 @@ export const categoryContent = {
       "Stock varies by diameter and pressure rating — call ahead to confirm availability before visiting. Located at Katraj-Kondhwa Road, Kondhwa, Pune 411048. Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM. Bulk order enquiries welcome.",
     ],
     relatedIds: ["fasteners-fittings", "plywood"],
+    faqs: [
+      {
+        q: "Do you stock PVC pipes in Kondhwa, Pune?",
+        a: "Yes — Maimoon stocks PVC pressure pipes and SWR drainage pipes in standard diameters, plus PVC rods and mild steel bar sections. Stock varies by diameter — call 098230 16058 to confirm availability before visiting.",
+      },
+      {
+        q: "Can I buy plumbing materials and hardware fittings together at Maimoon?",
+        a: "Yes — Maimoon carries PVC pipes alongside hand tools, drill bits, adhesives, fasteners, and general hardware needed for any plumbing installation, making it a single sourcing stop for contractors across Pune.",
+      },
+    ],
   },
 };

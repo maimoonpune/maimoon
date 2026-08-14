@@ -1,9 +1,21 @@
-import { business, placeholderReviews } from "../data/shop";
+import { Head } from "vite-react-ssg";
+import { business, placeholderReviews, siteUrl } from "../data/shop";
 import "./Reviews.css";
 
 export default function Reviews() {
   return (
     <div className="container reviews-page">
+      <Head>
+        <title>Reviews — Maimoon Hardware & Plywood, Kondhwa Pune</title>
+        <meta
+          name="description"
+          content={`Maimoon Industrial Hardware — rated ${business.ratings.google.score}★ on Google and ${business.ratings.justdial.score}★ on JustDial. Hardware shop in Kondhwa, Pune.`}
+        />
+        <link rel="canonical" href={`${siteUrl}/reviews`} />
+        <meta property="og:title" content="Reviews — Maimoon Hardware & Plywood, Kondhwa Pune" />
+        <meta property="og:url" content={`${siteUrl}/reviews`} />
+      </Head>
+
       <span className="eyebrow">Customer Feedback</span>
       <h1 className="section-title">Reviews</h1>
 

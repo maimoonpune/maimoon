@@ -1,15 +1,90 @@
 import { Link } from "react-router-dom";
-import { business, categories } from "../data/shop";
+import { Head } from "vite-react-ssg";
+import { business, categories, siteUrl } from "../data/shop";
 import BrandStrip from "../components/BrandStrip";
 import storefront1 from "../assets/photos/storefront-1.png";
 import storefront2 from "../assets/photos/storefront-2.png";
 import "./Home.css";
 
+const PAGE_TITLE = "Maimoon — Industrial Hardware & Plywood, Kondhwa Pune";
+const PAGE_DESC =
+  "Maimoon Industrial Hardware & Plywood — trusted hardware shop in Kondhwa, Pune since 2002. Power tools, hand tools, plywood, adhesives, fasteners, paints and more. Authorised dealer for Taparia, DeWalt, HIKOKI, Godrej, Dr Fixit.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HardwareStore",
+  "@id": siteUrl,
+  name: business.fullName,
+  url: siteUrl,
+  telephone: `+${business.whatsapp}`,
+  foundingDate: String(business.established),
+  priceRange: "₹",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: `${business.address.line1}, ${business.address.line2}`,
+    addressLocality: "Kondhwa",
+    addressRegion: "Maharashtra",
+    postalCode: "411048",
+    addressCountry: "IN",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: business.geo.lat,
+    longitude: business.geo.lng,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      opens: "09:30",
+      closes: "19:30",
+    },
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: String(business.ratings.google.score),
+    reviewCount: String(business.ratings.google.count),
+    bestRating: "5",
+  },
+  areaServed: ["Pune", "Kondhwa", "NIBM Road", "Katraj"],
+};
+
 export default function Home() {
+  const ogImage = `${siteUrl}/storefront-og.png`;
+
   return (
     <div className="home">
+      <Head>
+        <title>{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESC} />
+        <link rel="canonical" href={siteUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESC} />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content="Maimoon Industrial Hardware storefront, Kondhwa Pune" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:site_name" content={business.fullName} />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESC} />
+        <meta name="twitter:image" content={ogImage} />
+
+        {/* JSON-LD */}
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Head>
+
       <section className="hero">
-        <img src={storefront1} alt="Maimoon Industrial Hardware storefront in Kondhwa, Pune" className="hero-img" />
+        <img
+          src={storefront1}
+          alt="Maimoon Industrial Hardware & Plywood storefront in Kondhwa, Pune"
+          className="hero-img"
+        />
         <div className="hero-overlay" />
         <div className="container hero-content">
           <span className="eyebrow" style={{ color: "var(--paper)" }}>Est. {business.established} · Kondhwa, Pune</span>
@@ -35,8 +110,10 @@ export default function Home() {
         <h2 className="section-title">Browse by Category</h2>
         <div className="category-grid">
           {categories.map((c) => (
-            <Link to={`/products?category=${c.id}`} className="category-card" key={c.id}>
-              <span className="category-count">{c.placeholderCount}+ items</span>
+            <Link to={`/products/${c.id}`} className="category-card" key={c.id}>
+              {c.products.length > 0 && (
+                <span className="category-count">{c.products.length} photos</span>
+              )}
               <h3>{c.name}</h3>
               <p>{c.description}</p>
             </Link>
@@ -46,14 +123,19 @@ export default function Home() {
 
       <section className="about-strip">
         <div className="container about-strip-inner">
-          <img src={storefront2} alt="Maimoon shopfront" className="about-strip-img" />
+          <img
+            src={storefront2}
+            alt="Maimoon Industrial Hardware & Plywood shopfront, Kondhwa Pune"
+            className="about-strip-img"
+          />
           <div>
             <span className="eyebrow">Since {business.established}</span>
             <h2 className="section-title">A Neighbourhood Fixture for Two Decades</h2>
             <p className="about-strip-text">
-              Maimoon has supplied hardware, tools, and plywood to laborers, contractors,
-              and industrial buyers across Kondhwa for over twenty years. Authorised
-              dealer for Taparia, DeWalt, HIKOKI, Godrej, and more.
+              Maimoon is a trusted hardware shop in Kondhwa, Pune — supplying
+              industrial hardware, tools, and plywood to laborers, contractors,
+              and buyers across Pune for over twenty years. Authorised dealer
+              for Taparia, DeWalt, HIKOKI, Godrej, and more.
             </p>
             <Link to="/about" className="btn btn-outline">Our Story</Link>
           </div>

@@ -1,0 +1,50 @@
+.contact-page {
+  padding: 56px 24px 96px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  margin-top: 24px;
+}
+
+.contact-block {
+  margin-bottom: 32px;
+}
+
+.contact-block h3 {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.contact-link:hover { color: var(--rust); }
+
+.contact-block p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0;
+}
+
+.contact-map {
+  border-radius: 4px;
+  overflow: hidden;
+  min-height: 380px;
+  border: 1px solid var(--paper-dim);
+}
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}

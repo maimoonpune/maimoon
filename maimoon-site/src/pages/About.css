@@ -1,0 +1,47 @@
+.about-hero {
+  padding: 64px 24px 40px;
+}
+
+.about-lead {
+  font-size: 19px;
+  line-height: 1.7;
+  max-width: 640px;
+  color: var(--ink);
+}
+
+.about-signage-img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+}
+
+.about-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 56px 24px 96px;
+}
+
+.about-block h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: var(--rust);
+}
+
+.about-block p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.about-hours {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--steel);
+}
+
+@media (max-width: 900px) {
+  .about-body { grid-template-columns: 1fr; }
+}

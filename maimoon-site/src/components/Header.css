@@ -16,6 +16,7 @@
 .brand-mark {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   line-height: 1;
   flex-shrink: 0;
 }
@@ -23,8 +24,13 @@
 .brand-name {
   font-family: var(--font-display);
   font-size: 26px;
-  color: var(--paper);
+  color: var(--white);
   letter-spacing: 0.02em;
+  background: var(--rust);
+  border-radius: 5px;
+  padding: 6px 12px;
+  line-height: 1;
+  display: block;
 }
 
 .brand-sub {

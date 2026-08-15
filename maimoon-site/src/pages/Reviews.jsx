@@ -1,5 +1,5 @@
 import { Head } from "vite-react-ssg";
-import { business, placeholderReviews, siteUrl } from "../data/shop";
+import { business, siteUrl } from "../data/shop";
 import "./Reviews.css";
 
 export default function Reviews() {
@@ -30,19 +30,30 @@ export default function Reviews() {
         </div>
       </div>
 
-      <div className="reviews-notice">
-        Our previous customer reviews were lost and are being restored. The cards
-        below are placeholders and will be replaced with real feedback.
-      </div>
-
-      <div className="reviews-grid">
-        {placeholderReviews.map((r, i) => (
-          <div className="review-card placeholder" key={i}>
-            <div className="review-stars">{"★".repeat(r.rating)}</div>
-            <p>{r.text}</p>
-            <span className="review-name">— {r.name}</span>
-          </div>
-        ))}
+      <div className="reviews-outbound">
+        <p className="reviews-outbound-text">
+          Read our reviews on{" "}
+          <a
+            href={business.reviewUrls.google}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Google Maps
+          </a>
+          {business.reviewUrls.justdial && (
+            <>
+              {" "}or{" "}
+              <a
+                href={business.reviewUrls.justdial}
+                target="_blank"
+                rel="noreferrer"
+              >
+                JustDial
+              </a>
+            </>
+          )}
+          .
+        </p>
       </div>
     </div>
   );

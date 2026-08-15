@@ -32,15 +32,23 @@
   margin-top: 4px;
 }
 
-.reviews-notice {
-  background: var(--paper-dim);
-  border-left: 4px solid var(--rust);
-  padding: 14px 18px;
-  font-size: 13.5px;
+.reviews-outbound {
+  margin: 8px 0 40px;
+}
+
+.reviews-outbound-text {
+  font-size: 15px;
   color: var(--steel);
-  margin-bottom: 32px;
-  max-width: 640px;
-  line-height: 1.6;
+  margin: 0;
+}
+
+.reviews-outbound-text a {
+  color: var(--rust);
+  text-decoration: underline;
+}
+
+.reviews-outbound-text a:hover {
+  color: var(--rust-dark);
 }
 
 .reviews-grid {

@@ -65,6 +65,12 @@ export const business = {
     google: { score: 5.0, count: 4 },
     justdial: { score: 4.9, count: 14 },
   },
+  // Direct links to the live review listings.
+  // Fill in justdial with the exact URL from your JustDial business page.
+  reviewUrls: {
+    google: "https://www.google.com/maps/search/Maimoon+Industrial+Hardware+%26+Plywood+Kondhwa+Pune/",
+    justdial: "", // TODO: paste your JustDial listing URL here
+  },
 };
 
 export const brands = [

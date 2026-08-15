@@ -144,6 +144,37 @@ img { max-width: 100%; display: block; }
 [data-theme="dark"] .contact-section { border-color: #333530; }
 [data-theme="dark"] .landmark-chip { background: #252720; color: var(--paper); }
 [data-theme="dark"] .copy-btn { border-color: #444; color: var(--steel-light); }
+[data-theme="dark"] .products-search {
+  background: #252720;
+  border-color: #444;
+  color: var(--paper);
+}
+[data-theme="dark"] .filter-chip {
+  background: #252720;
+  border-color: #444;
+  color: var(--paper);
+}
+[data-theme="dark"] .filter-chip.active {
+  background: var(--rust);
+  border-color: var(--rust);
+  color: var(--white);
+}
+[data-theme="dark"] .product-card {
+  background: #252720;
+  border-color: #333530;
+}
+[data-theme="dark"] .product-name { color: var(--paper); }
+[data-theme="dark"] .review-card {
+  background: #252720;
+  border-color: #333530;
+}
+[data-theme="dark"] .review-card p { color: var(--paper); }
+[data-theme="dark"] .reviews-notice { background: #1E201A; }
+[data-theme="dark"] .cd-related-card {
+  background: #252720;
+}
+[data-theme="dark"] .cd-related-card:hover { background: #2E3029; }
+[data-theme="dark"] .cd-related-card strong { color: var(--paper); }
 
 /* ── Print ──────────────────────────────────────────────── */
 @media print {

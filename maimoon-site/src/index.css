@@ -61,6 +61,23 @@ img { max-width: 100%; display: block; }
   * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 }
 
+/* ── Skip link ─────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--rust);
+  color: var(--white);
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  z-index: 9999;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.skip-link:focus { top: 0; }
+
+/* ── WhatsApp float ─────────────────────────────────────── */
 .whatsapp-float {
   position: fixed;
   bottom: 24px;
@@ -80,4 +97,65 @@ img { max-width: 100%; display: block; }
 
 .whatsapp-float:hover {
   transform: scale(1.06);
+}
+
+/* ── Call float ─────────────────────────────────────────── */
+.call-float {
+  position: fixed;
+  bottom: 88px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--rust);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  z-index: 90;
+  transition: transform 0.15s, background 0.15s;
+}
+.call-float:hover {
+  transform: scale(1.06);
+  background: var(--rust-dark);
+}
+
+/* ── Dark mode ──────────────────────────────────────────── */
+[data-theme="dark"] body {
+  background: #1A1C19;
+  color: var(--paper);
+}
+[data-theme="dark"] .category-card {
+  background: #252720;
+  border-color: #333530;
+}
+[data-theme="dark"] .about-strip { background: #1E201A; }
+[data-theme="dark"] .about-strip-text,
+[data-theme="dark"] .contact-block p,
+[data-theme="dark"] .contact-section p,
+[data-theme="dark"] .contact-section strong,
+[data-theme="dark"] .faq-question,
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .contact-section h2,
+[data-theme="dark"] .contact-link { color: var(--paper); }
+[data-theme="dark"] .faq-item,
+[data-theme="dark"] .faq-item:first-child { border-color: #333530; }
+[data-theme="dark"] .contact-section { border-color: #333530; }
+[data-theme="dark"] .landmark-chip { background: #252720; color: var(--paper); }
+[data-theme="dark"] .copy-btn { border-color: #444; color: var(--steel-light); }
+
+/* ── Print ──────────────────────────────────────────────── */
+@media print {
+  .site-header,
+  .site-footer,
+  .whatsapp-float,
+  .call-float,
+  .scroll-top-btn,
+  .scroll-progress,
+  .theme-toggle { display: none !important; }
+  body { background: white; color: black; font-size: 12pt; }
+  a { color: black; text-decoration: underline; }
+  .contact-map { display: none; }
+  .container { max-width: 100%; padding: 0 16px; }
 }

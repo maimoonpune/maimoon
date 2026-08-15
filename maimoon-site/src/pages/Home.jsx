@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Head } from "vite-react-ssg";
-import { business, categories, siteUrl } from "../data/shop";
+import { business, categories, siteUrl, homeFAQs } from "../data/shop";
 import BrandStrip from "../components/BrandStrip";
+import FAQ from "../components/FAQ";
 import storefront1 from "../assets/photos/storefront-1.png";
 import storefront2 from "../assets/photos/storefront-3.png";
 import "./Home.css";
@@ -13,48 +14,11 @@ const PAGE_DESC =
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Where is Maimoon Industrial Hardware located in Pune?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Maimoon Industrial Hardware & Plywood is at Shop No 8, Shanti Heights, S No 54, Katraj-Kondhwa Road, Kondhwa, Pune, Maharashtra 411048. Easily reached from NIBM Road, Wanowrie, Undri, and Bibvewadi.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What are Maimoon Industrial Hardware's opening hours?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Maimoon is open Monday to Saturday 9:30 AM–7:30 PM and Sunday 9:30 AM–1:00 PM.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Maimoon deliver plywood and hardware in Kondhwa and Pune?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "For bulk orders — construction projects, contractor sourcing runs, or large quantity requirements — ask about delivery when you call on 098230 16058. Delivery is discussed on a case-by-case basis.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What brands does Maimoon Industrial Hardware stock?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Maimoon stocks Taparia, DeWalt, HIKOKI, Godrej, Dr Fixit, Fischer, Norton, CUMI, Araldite, Fevicol, M-Seal, ABRO, Powercord, Addison, Venus, JK Files & Tools, Mangalam, and more — covering power tools, hand tools, adhesives, waterproofing, fasteners, and electrical supplies.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long has Maimoon been operating in Kondhwa, Pune?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Maimoon has operated from Katraj-Kondhwa Road, Kondhwa, Pune since 2002 — over two decades supplying contractors, fabricators, plumbers, and individual buyers across the city.",
-      },
-    },
-  ],
+  mainEntity: homeFAQs.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
 };
 
 const jsonLd = {
@@ -207,6 +171,10 @@ export default function Home() {
           Get Directions
         </a>
       </section>
+
+      <div className="container">
+        <FAQ items={homeFAQs} />
+      </div>
     </div>
   );
 }

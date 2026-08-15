@@ -1,0 +1,32 @@
+.copy-btn {
+  background: transparent;
+  border: 1px solid var(--paper-dim);
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: var(--steel);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  vertical-align: middle;
+  flex-shrink: 0;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.copy-btn:hover {
+  border-color: var(--rust);
+  color: var(--rust);
+}
+
+.copy-btn.copied {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.copy-feedback {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}

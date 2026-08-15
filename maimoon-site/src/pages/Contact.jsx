@@ -1,44 +1,17 @@
 import { Head } from "vite-react-ssg";
-import { business, siteUrl } from "../data/shop";
+import { business, siteUrl, contactFAQs } from "../data/shop";
+import CopyButton from "../components/CopyButton";
+import FAQ from "../components/FAQ";
 import "./Contact.css";
 
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do I get to Maimoon Industrial Hardware in Kondhwa, Pune?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Maimoon is at Shop No 8, Shanti Heights, S No 54, Katraj-Kondhwa Road, Kondhwa, Pune 411048. From NIBM Road it's a 3-4 minute drive. From Wanowrie or Undri, roughly 10 minutes. Search \"Maimoon Industrial Hardware & Plywood\" on Google Maps — the pin is accurate.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What are Maimoon's opening hours on Sunday?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Maimoon is open Sunday 9:30 AM–1:00 PM. Monday to Saturday hours are 9:30 AM–7:30 PM.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Maimoon offer delivery for hardware and plywood orders in Pune?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "For bulk orders — construction projects, contractor sourcing, or large quantities — ask about delivery when you call on 098230 16058. We can discuss what's possible on a case-by-case basis.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How can I contact Maimoon Industrial Hardware?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Call us on 098230 16058 (primary and WhatsApp), 9595169520, or 9657019021. Open Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM.",
-      },
-    },
-  ],
+  mainEntity: contactFAQs.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
 };
 
 export default function Contact() {
@@ -69,7 +42,10 @@ export default function Contact() {
           <div className="contact-block">
             <h2>Phone</h2>
             {business.phones.map((p) => (
-              <a href={`tel:${p.replace(/\s/g, "")}`} className="contact-link" key={p}>{p}</a>
+              <div className="contact-link-row" key={p}>
+                <a href={`tel:${p.replace(/\s/g, "")}`} className="contact-link">{p}</a>
+                <CopyButton text={p} label={`Copy ${p}`} />
+              </div>
             ))}
           </div>
 
@@ -87,7 +63,10 @@ export default function Contact() {
 
           <div className="contact-block">
             <h2>Address</h2>
-            <p>{business.address.line1}<br />{business.address.line2}<br />{business.address.city}</p>
+            <div className="contact-address-row">
+              <p>{business.address.line1}<br />{business.address.line2}<br />{business.address.city}</p>
+              <CopyButton text={business.address.full} label="Copy full address" />
+            </div>
           </div>
 
           <div className="contact-block">
@@ -159,6 +138,8 @@ export default function Contact() {
           discuss what's possible on a case-by-case basis.
         </p>
       </div>
+
+      <FAQ items={contactFAQs} />
     </div>
   );
 }

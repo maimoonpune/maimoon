@@ -31,13 +31,26 @@
   margin-bottom: 10px;
 }
 
+.contact-link-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.contact-address-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
 .contact-link {
   display: block;
   font-size: 18px;
   font-weight: 700;
   color: var(--ink);
   text-decoration: none;
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 
 .contact-link:hover {

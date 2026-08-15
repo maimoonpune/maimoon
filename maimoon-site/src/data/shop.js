@@ -289,6 +289,48 @@ export const categories = [
   },
 ];
 
+export const homeFAQs = [
+  {
+    question: "Where is Maimoon Industrial Hardware located in Pune?",
+    answer: "Maimoon Industrial Hardware & Plywood is at Shop No 8, Shanti Heights, S No 54, Katraj-Kondhwa Road, Kondhwa, Pune, Maharashtra 411048. Easily reached from NIBM Road, Wanowrie, Undri, and Bibvewadi.",
+  },
+  {
+    question: "What are Maimoon Industrial Hardware's opening hours?",
+    answer: "Maimoon is open Monday to Saturday 9:30 AM–7:30 PM and Sunday 9:30 AM–1:00 PM.",
+  },
+  {
+    question: "Does Maimoon deliver plywood and hardware in Kondhwa and Pune?",
+    answer: "For bulk orders — construction projects, contractor sourcing runs, or large quantity requirements — ask about delivery when you call on 098230 16058. Delivery is discussed on a case-by-case basis.",
+  },
+  {
+    question: "What brands does Maimoon Industrial Hardware stock?",
+    answer: "Maimoon stocks Taparia, DeWalt, HIKOKI, Godrej, Dr Fixit, Fischer, Norton, CUMI, Araldite, Fevicol, M-Seal, ABRO, Powercord, Addison, Venus, JK Files & Tools, Mangalam, and more — covering power tools, hand tools, adhesives, waterproofing, fasteners, and electrical supplies.",
+  },
+  {
+    question: "How long has Maimoon been operating in Kondhwa, Pune?",
+    answer: "Maimoon has operated from Katraj-Kondhwa Road, Kondhwa, Pune since 2002 — over two decades supplying contractors, fabricators, plumbers, and individual buyers across the city.",
+  },
+];
+
+export const contactFAQs = [
+  {
+    question: "How do I get to Maimoon Industrial Hardware in Kondhwa, Pune?",
+    answer: 'Maimoon is at Shop No 8, Shanti Heights, S No 54, Katraj-Kondhwa Road, Kondhwa, Pune 411048. From NIBM Road it\'s a 3-4 minute drive. From Wanowrie or Undri, roughly 10 minutes. Search "Maimoon Industrial Hardware & Plywood" on Google Maps — the pin is accurate.',
+  },
+  {
+    question: "What are Maimoon's opening hours on Sunday?",
+    answer: "Maimoon is open Sunday 9:30 AM–1:00 PM. Monday to Saturday hours are 9:30 AM–7:30 PM.",
+  },
+  {
+    question: "Does Maimoon offer delivery for hardware and plywood orders in Pune?",
+    answer: "For bulk orders — construction projects, contractor sourcing, or large quantities — ask about delivery when you call on 098230 16058. We can discuss what's possible on a case-by-case basis.",
+  },
+  {
+    question: "How can I contact Maimoon Industrial Hardware?",
+    answer: "Call us on 098230 16058 (primary and WhatsApp), 9595169520, or 9657019021. Open Mon–Sat 9:30 AM–7:30 PM, Sun 9:30 AM–1:00 PM.",
+  },
+];
+
 // Placeholder reviews — clearly marked, to be replaced with restored real reviews.
 export const placeholderReviews = [
   {

@@ -27,6 +27,22 @@
     <meta name="twitter:title" content="Maimoon — Industrial Hardware &amp; Plywood, Kondhwa Pune" />
     <meta name="twitter:description" content="Trusted hardware shop in Kondhwa, Pune since 2002. Mon–Sat 9:30 AM – 7:30 PM, Sun 9:30 AM – 1:00 PM." />
     <meta name="twitter:image" content="https://maimoon.in/storefront-og.png" />
+
+    <!-- Google Analytics 4 — injected only when VITE_GA_MEASUREMENT_ID is set at build time; no-op otherwise -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      (function(){
+        var id = '%VITE_GA_MEASUREMENT_ID%';
+        if (id.charAt(0) !== 'G') return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', id);
+      })();
+    </script>
   </head>
   <body>
     <script>

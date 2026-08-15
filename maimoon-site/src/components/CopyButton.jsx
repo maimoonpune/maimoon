@@ -5,10 +5,11 @@ export default function CopyButton({ text, label = "Copy to clipboard" }) {
   const [copied, setCopied] = useState(false);
 
   function handleCopy() {
-    navigator.clipboard?.writeText(text).then(() => {
+    if (!navigator.clipboard) return;
+    navigator.clipboard.writeText(text).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    });
+    }).catch(() => {});
   }
 
   return (

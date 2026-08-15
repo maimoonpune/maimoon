@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Head } from "vite-react-ssg";
 import { business, categories, siteUrl, homeFAQs } from "../data/shop";
+import { trackEvent } from "../analytics";
 import BrandStrip from "../components/BrandStrip";
 import FAQ from "../components/FAQ";
 import storefront1 from "../assets/photos/storefront-1.png";
@@ -111,7 +112,7 @@ export default function Home() {
           </h1>
           <p className="hero-sub">{business.tagline}</p>
           <div className="hero-actions">
-            <a href={`tel:${business.primaryPhone}`} className="btn btn-rust">Call the Shop</a>
+            <a href={`tel:${business.primaryPhone}`} className="btn btn-rust" onClick={() => trackEvent('phone_call', { location: 'home_hero' })}>Call the Shop</a>
             <Link to="/products" className="btn btn-outline">Browse Products</Link>
           </div>
           <div className="hero-rating">
@@ -167,7 +168,7 @@ export default function Home() {
           <p className="about-strip-text">{business.address.line1}, {business.address.line2}</p>
           <p className="hours-text">Mon–Sat {business.hours.monSat} · Sun {business.hours.sun}</p>
         </div>
-        <a href={business.mapDirectionsUrl} target="_blank" rel="noreferrer" className="btn btn-rust">
+        <a href={business.mapDirectionsUrl} target="_blank" rel="noreferrer" className="btn btn-rust" onClick={() => trackEvent('maps_directions', { location: 'home' })}>
           Get Directions
         </a>
       </section>

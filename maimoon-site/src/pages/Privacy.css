@@ -1,0 +1,47 @@
+.privacy-page {
+  padding-top: 48px;
+  padding-bottom: 80px;
+  max-width: 720px;
+}
+
+.privacy-meta {
+  font-size: 0.85rem;
+  color: var(--steel);
+  margin-bottom: 32px;
+}
+
+.privacy-heading {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1.1rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+.privacy-body {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.privacy-list {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--ink);
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.privacy-list li {
+  margin-bottom: 6px;
+}
+
+.privacy-page a {
+  color: var(--rust);
+  text-decoration: underline;
+}
+
+.privacy-page a:hover {
+  color: var(--rust-dark);
+}

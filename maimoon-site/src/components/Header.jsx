@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { business } from "../data/shop";
+import { trackEvent } from "../analytics";
 import "./Header.css";
 
 function ThemeToggle() {
@@ -79,6 +80,7 @@ export default function Header() {
           <a
             className="header-call"
             href={`tel:${business.primaryPhone}`}
+            onClick={() => trackEvent('phone_call', { location: 'header' })}
           >
             Call Now
           </a>

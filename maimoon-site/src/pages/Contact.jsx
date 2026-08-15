@@ -1,5 +1,6 @@
 import { Head } from "vite-react-ssg";
 import { business, siteUrl, contactFAQs } from "../data/shop";
+import { trackEvent } from "../analytics";
 import CopyButton from "../components/CopyButton";
 import FAQ from "../components/FAQ";
 import "./Contact.css";
@@ -56,6 +57,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
               className="btn btn-rust"
+              onClick={() => trackEvent('whatsapp_click', { location: 'contact' })}
             >
               Message on WhatsApp
             </a>
@@ -111,7 +113,7 @@ export default function Contact() {
           <span className="landmark-chip">Near Katraj</span>
         </div>
         <p className="contact-directions-link">
-          <a href={business.mapDirectionsUrl} target="_blank" rel="noreferrer" className="btn btn-outline" style={{ marginTop: "20px", display: "inline-block" }}>
+          <a href={business.mapDirectionsUrl} target="_blank" rel="noreferrer" className="btn btn-outline" style={{ marginTop: "20px", display: "inline-block" }} onClick={() => trackEvent('maps_directions', { location: 'contact' })}>
             Get Directions on Google Maps
           </a>
         </p>

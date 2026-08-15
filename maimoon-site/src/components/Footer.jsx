@@ -34,6 +34,7 @@ export default function Footer() {
       </div>
       <div className="container footer-bottom">
         <span>&copy; {new Date().getFullYear()} Maimoon Industrial Hardware &amp; Plywood. Est. {business.established}.</span>
+        <Link to="/privacy" className="footer-privacy-link">Privacy Policy</Link>
       </div>
     </footer>
   );
